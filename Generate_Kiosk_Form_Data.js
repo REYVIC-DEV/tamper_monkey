@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Generate Kiosk Form Data
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  Add a button to generate test data for the kiosk enlisting form
 // @author       You
 // @match        *://*/kiosk/enlisting/new/*
