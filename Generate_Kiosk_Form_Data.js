@@ -3,15 +3,19 @@
 // @namespace    http://tampermonkey.net/
 // @version      0.3
 // @description  Add a button to generate test data for the kiosk enlisting form
-// @author       You
+// @author       REYVIC-DEV
 // @match        *://*/kiosk/enlisting/new/*
 // @grant        none
 // @require      https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js
+
+// @updateURL   https://raw.githubusercontent.com/REYVIC-DEV/tamper_monkey/refs/heads/main/Generate_Kiosk_Form_Data.js
+// @downloadURL https://raw.githubusercontent.com/REYVIC-DEV/tamper_monkey/refs/heads/main/Generate_Kiosk_Form_Data.js
 // ==/UserScript==
+
 
 (function() {
     'use strict';
-    //test update
+
     console.log('Tampermonkey script loaded');
 
     // Wait for the page to load
