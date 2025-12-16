@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Holiday Cutoff Tester UI - Localhost
 // @namespace    http://tampermonkey.net/
-// @version      0.3
+// @version      0.4
 // @description  Interactive holiday cutoff testing with UI (no reload)
 // @author       You
 // @match        http://localhost:3000/*
@@ -16,12 +16,7 @@
     panel.innerHTML = `
         <div style="position:fixed;top:10px;left:10px;z-index:9999;background:#333;color:#fff;padding:10px;border-radius:5px;font-size:12px;font-family:monospace;max-width:200px;">
             <div>🎄 Holiday Tester</div>
-            <select id="holiday-date-select" style="margin-top:5px;width:100%;padding:2px;">
-                <option value="2024-12-15">Dec 15 - Both Available</option>
-                <option value="2024-12-22">Dec 22 - Dec 31 Only</option>
-                <option value="2024-12-25">Dec 25 - None Available</option>
-                <option value="2024-12-28">Dec 28 - None Available</option>
-            </select>
+            <input type="date" id="holiday-date-input" value="2024-12-15" style="margin-top:5px;width:100%;padding:2px;background:#fff;color:#000;border:1px solid #ccc;border-radius:3px;">
             <br><button id="apply-btn" style="margin-top:5px;width:100%;padding:3px;">Apply Date</button>
             <br><button id="reset-btn" style="margin-top:2px;width:100%;padding:3px;background:#666;">Reset to Real Date</button>
         </div>
@@ -63,7 +58,7 @@
     }
 
     // Event listeners
-    document.getElementById('holiday-date-select').addEventListener('change', function(e) {
+    document.getElementById('holiday-date-input').addEventListener('change', function(e) {
         currentTestDate = e.target.value;
     });
 
@@ -82,7 +77,7 @@
 
     document.getElementById('reset-btn').addEventListener('click', function() {
         setTestDate(null);
-        document.getElementById('holiday-date-select').value = '2024-12-15';
+        document.getElementById('holiday-date-input').value = '2024-12-15';
     });
 
     // Initial setup - don't override by default
