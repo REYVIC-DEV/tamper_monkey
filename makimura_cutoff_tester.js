@@ -1,10 +1,11 @@
 // ==UserScript==
-// @name         Holiday Cutoff Tester UI - Localhost
+// @name         Holiday Cutoff Tester UI
 // @namespace    http://tampermonkey.net/
-// @version      0.5
+// @version      0.6
 // @description  Interactive holiday cutoff testing with UI (no reload)
 // @author       You
 // @match        http://localhost:3000/*
+// @match        https://staging-makimura-ramen-v2-f2zpu.ondigitalocean.app/*
 // @grant        none
 // ==/UserScript==
 
